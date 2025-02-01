@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 2nd Anniversary Muthee!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="message-container">
+            <h1 class="fade-in">Hey devuu</h1>
+            <p class="fade-in delay-1">enik ninodi oru imp krym parayan ind</p>
+            <p class="fade-in delay-2">I love youh soo much muthe</p>
+            <p class="fade-in delay-3">2 years ayy</p>
+            <p class="fade-in delay-4">Happy 2nd love anniversary muthee</p>
+            
+            <div class="notes-section fade-in delay-5">
+                <textarea placeholder="Write your message here... 💌"></textarea>
+            </div>
+        </div>
+
+        <div class="gallery-container fade-in delay-6">
+            <div class="gallery">
+                <img src="images/photo1.jpg" class="active">
+                <img src="images/photo2.jpg">
+                <img src="images/photo3.jpg">
+            </div>
+        </div>
+
+        <footer class="fade-in delay-7">
+            <p>till death -ur love</p>
+        </footer>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.gallery img');
+        
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+
+        setTimeout(() => {
+            images[0].classList.add('active');
+            setInterval(showNextImage, 4000);
+        }, 6000);
+    </script>
+</body>
+</html>
